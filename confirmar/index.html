@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Confirmar consulta · Daphyni Silva Nutricionista</title>
+<style>
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(165deg,#a58e7a,#6c4d3b);font-family:system-ui,Arial,sans-serif;color:#fff8ee;text-align:center;padding:24px}
+  a{color:#f0dcae}
+</style>
+</head>
+<body>
+<p>Abrindo a confirmação da sua consulta...<br><br><a id="link" href="https://portal.daphyninutricao.com.br/agendar/">Se não abrir sozinho, toque aqui.</a></p>
+<script>
+  // Leva o paciente para a página do portal, mantendo o código do link (?c=...).
+  var destino = "https://portal.daphyninutricao.com.br/agendar/" + window.location.search;
+  document.getElementById("link").href = destino;
+  window.location.replace(destino);
+</script>
+</body>
+</html>

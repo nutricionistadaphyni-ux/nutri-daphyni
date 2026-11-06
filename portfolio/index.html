@@ -8,8 +8,8 @@
     <meta property="og:title" content="Daphyni · Nutricionista Comportamental">
     <meta property="og:description" content="Atendimento nutricional on-line. Nutrição possível, sem culpa e sem restrições.">
     <meta property="og:image" content="https://daphyninutricao.com.br/portfolio/capa-whatsapp.jpg">
-    <meta property="og:url" content="https://daphyninutricao.com.br/">
-    <link rel="canonical" href="https://daphyninutricao.com.br/">
+    <meta property="og:url" content="https://daphyninutricao.com.br/portfolio/">
+    <link rel="canonical" href="https://daphyninutricao.com.br/portfolio/">
     
     <style>
         /* SPLASH STYLES */
@@ -528,14 +528,14 @@ h2{font-weight:500;font-size:clamp(26px,3.2vw,36px);line-height:1.15;letter-spac
     <h2>Planos on-line</h2>
     <div class="rule"></div>
     <div class="grid" id="grid">
-      <button class="opt" data-k="1" data-name="Consulta avulsa" data-price="R$ 144,00" aria-pressed="false"><span class="n">Consulta avulsa</span><span class="d">45 minutos para avaliar sua rotina e definir estratégias para começar.</span><span class="price">R$ 144,00</span><span class="per">1 consulta</span><span class="save none"></span></button>
-      <button class="opt" data-k="3" data-name="Acompanhamento 3 meses" data-price="R$ 384,00" aria-pressed="true"><span class="n">Acompanhamento 3 meses</span><span class="d">Tempo para praticar, ajustar e evoluir.</span><span class="price">R$ 384,00</span><span class="per">R$ 128,00 por mês</span><span class="save">Economia de R$ 48,00</span></button>
-      <button class="opt" data-k="6" data-name="Acompanhamento 6 meses" data-price="R$ 720,00" aria-pressed="false"><span class="n">Acompanhamento 6 meses</span><span class="d">Mudanças consistentes e que se mantêm.</span><span class="price">R$ 720,00</span><span class="per">R$ 120,00 por mês</span><span class="save">Economia de R$ 144,00</span></button>
+      <button class="opt" data-k="1" data-name="Consulta avulsa" aria-pressed="false"><span class="n">Consulta avulsa</span><span class="d">45 minutos para avaliar sua rotina e definir estratégias para começar.</span></button>
+      <button class="opt" data-k="3" data-name="Acompanhamento 3 meses" aria-pressed="true"><span class="n">Acompanhamento 3 meses</span><span class="d">Tempo para praticar, ajustar e evoluir.</span></button>
+      <button class="opt" data-k="6" data-name="Acompanhamento 6 meses" aria-pressed="false"><span class="n">Acompanhamento 6 meses</span><span class="d">Mudanças consistentes e que se mantêm.</span></button>
     </div>
     <div class="incl"><span>Consultas on-line de 45 minutos</span><span>Suporte pelo WhatsApp entre as consultas</span><span>Materiais complementares quando necessário</span><span>100% on-line</span></div>
     <div class="summary">
-      <div><div class="lbl" id="sum-lbl">Plano escolhido · Acompanhamento 3 meses</div><div class="total" id="sum-total">R$ 384,00</div></div>
-      <a class="btn fill" id="wa-plan" href="https://wa.me/5548991722194?text=Ol%C3%A1%2C%20Daphyni%21%20Tenho%20interesse%20no%20plano%20on-line%3A%20Acompanhamento%203%20meses%20%28R%24%20384%2C00%29.%20Pode%20me%20passar%20os%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener">Quero este plano</a>
+      <div><div class="lbl" id="sum-lbl">Plano escolhido · Acompanhamento 3 meses</div></div>
+      <a class="btn fill" id="wa-plan" href="https://wa.me/5548991722194?text=Ol%C3%A1%2C%20Daphyni%21%20Tenho%20interesse%20no%20plano%20on-line%3A%20Acompanhamento%203%20meses.%20Pode%20me%20passar%20os%20valores%20e%20os%20hor%C3%A1rios%20dispon%C3%ADveis%3F" target="_blank" rel="noopener">Consultar valores no WhatsApp</a>
     </div>
   </section>
 
@@ -567,10 +567,9 @@ h2{font-weight:500;font-size:clamp(26px,3.2vw,36px);line-height:1.15;letter-spac
   var btns=document.querySelectorAll("#grid .opt");
   function select(btn){
     for(var i=0;i<btns.length;i++) btns[i].setAttribute("aria-pressed", btns[i]===btn ? "true" : "false");
-    var name=btn.getAttribute("data-name"), price=btn.getAttribute("data-price");
+    var name=btn.getAttribute("data-name");
     document.getElementById("sum-lbl").textContent="Plano escolhido · "+name;
-    document.getElementById("sum-total").textContent=price;
-    document.getElementById("wa-plan").href="https://wa.me/"+PHONE+"?text="+encodeURIComponent("Olá, Daphyni! Tenho interesse no plano on-line: "+name+" ("+price+"). Pode me passar os horários disponíveis?");
+    document.getElementById("wa-plan").href="https://wa.me/"+PHONE+"?text="+encodeURIComponent("Olá, Daphyni! Tenho interesse no plano on-line: "+name+". Pode me passar os valores e os horários disponíveis?");
   }
   for(var i=0;i<btns.length;i++) btns[i].addEventListener("click", function(){ select(this); });
 })();
